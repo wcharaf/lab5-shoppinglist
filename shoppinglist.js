@@ -6,10 +6,11 @@ var pricelist = {
 };
 var shoplist = ["cheese","eggs","sugar"];
 shoplist.forEach(function(x) {
-  console.log(x +"...$"+pricelist.price[pricelist.name.indexOf(x)]);
-  total = total + pricelist.price[pricelist.name.indexOf(x)];
+  var locationindex= pricelist.name.indexOf(x);
+  console.log(x +"...$"+pricelist.price[locationindex].toFixed(2));
+  total += pricelist.price[locationindex];
 });
-console.log("TOTAL= $"+total);
+console.log("TOTAL= $"+total.toFixed(2));
 
 // figure it out excersize
 var makeintarray = [];
